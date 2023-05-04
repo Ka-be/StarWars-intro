@@ -4,7 +4,7 @@
 
 <!-- ![Status](https://img.shields.io/badge/Status-Finished-20bf6b?style=flat-square) -->
 
-<img src="images/logo.svg" width=50%>
+<img src="img/logo.svg" width=30%>
 
 A full Sass Star Wars introduction
 
