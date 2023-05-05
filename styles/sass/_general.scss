@@ -4,10 +4,6 @@ html, body{
 }
 
 body{
-    // background-image: url(/img/background.jpg);
-    // background-repeat: no-repeat;
-    // background-size: cover;
-    // display: flex;
     background: black;
 }
 
@@ -116,7 +112,7 @@ body{
 }
 
 .opening-stars--crawl{
-    animation: crawl 70s 9s linear forwards ;
+    animation: crawl 60s 9s linear forwards ;
 }
 
 @keyframes crawl {

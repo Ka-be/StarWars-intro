@@ -142,7 +142,7 @@ body {
   }
 }
 .opening-stars--crawl {
-  animation: crawl 70s 9s linear forwards;
+  animation: crawl 60s 9s linear forwards;
 }
 
 @keyframes crawl {
