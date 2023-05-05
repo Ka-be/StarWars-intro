@@ -65,11 +65,24 @@ body{
         }
     }
 }
-
-.btn{
+.audio-control{
+    z-index: 2;
     position: absolute;
     top: 0;
+    left: 10px;
+
+    .btn{
+        height: 50px;
+        opacity: 0.5;
+        cursor: pointer;
+        transition: all ease-out .3s;
+
+        &:hover{
+            opacity: 1;
+        }
+    }
 }
+
 
 // Animations
 .intro{

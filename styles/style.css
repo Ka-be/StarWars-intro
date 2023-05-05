@@ -89,9 +89,20 @@ body {
   margin: auto;
 }
 
-.btn {
+.audio-control {
+  z-index: 2;
   position: absolute;
   top: 0;
+  left: 10px;
+}
+.audio-control .btn {
+  height: 50px;
+  opacity: 0.5;
+  cursor: pointer;
+  transition: all ease-out 0.3s;
+}
+.audio-control .btn:hover {
+  opacity: 1;
 }
 
 .intro {

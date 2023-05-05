@@ -9,6 +9,9 @@
   <script src="/js/app.js" defer></script>
 </head>
 <body>
+  <div class="audio-control">
+    <img class="btn" id="audio-btn" src="/img/volume_on.svg"  onclick="toggleMute()"></img>
+  </div>
   <div class="scene">
     <p class="intro">A long time ago in a galaxy far, far away....</p>
     <div class="opening-stars">
@@ -50,11 +53,7 @@
   </div>
   
   <audio id="starwarstheme" src="/audio/StarWars-theme.aac" preload="auto"></audio>
-  <button class="btn" onclick="toggleMute()">Lecture/Pause</button>
 
-
-
-  <!-- JS -->
   
 </body>
 </html>
