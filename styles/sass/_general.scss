@@ -55,7 +55,7 @@ body{
             font-weight: 700;
             transform: rotateX(20deg);
             position: absolute;
-            top: 200vh;
+            top: 220vh;
 
             header{
                 text-transform: uppercase;
@@ -63,11 +63,16 @@ body{
             }
 
             p{
-                width: 80%;
+                width: 100%;
                 margin: auto;
             }
         }
     }
+}
+
+.btn{
+    position: absolute;
+    top: 0;
 }
 
 // Animations
@@ -91,7 +96,7 @@ body{
 }
 
 .opening-stars--logo{
-    animation: logo 10s ease-out 7s forwards;
+    animation: logo 9s ease-out 7s forwards;
 }
 
 @keyframes logo {
@@ -116,7 +121,7 @@ body{
 
 @keyframes crawl {
     0%{
-        top: 200vh;
+        top: 220vh;
         transform: rotateX(20deg) translateZ(40vh);
     }
 

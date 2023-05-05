@@ -1,14 +1,18 @@
 const audio = document.getElementById("starwarstheme");
 setTimeout(function() {
   audio.play();
-}, 7000);
+}, 6900);
 
-function togglePlay() {
-  if (audio.paused) {
-    audio.play();
-  } else {
-    audio.pause();
+audio.volume = 1;
+
+  function toggleMute() {
+    if (audio.volume === 0) {
+      // Si le volume est à 0, rétablir le volume à 1
+      audio.volume = 1;
+    } else {
+      // Sinon, mettre le volume à 0
+      audio.volume = 0;
+    }
   }
-}
 
 
