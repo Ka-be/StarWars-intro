@@ -37,6 +37,22 @@ body {
   background: black;
 }
 
+.audio-control {
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 10px;
+}
+.audio-control .btn {
+  height: 50px;
+  opacity: 0.5;
+  cursor: pointer;
+  transition: all ease-out 0.3s;
+}
+.audio-control .btn:hover {
+  opacity: 1;
+}
+
 .scene {
   height: 100%;
   width: 100%;
@@ -89,19 +105,49 @@ body {
   margin: auto;
 }
 
-.audio-control {
-  z-index: 2;
+.outro {
+  color: #ebbe1c;
   position: absolute;
   top: 0;
-  left: 10px;
+  transform: translateX(50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  opacity: 0;
 }
-.audio-control .btn {
-  height: 50px;
-  opacity: 0.5;
-  cursor: pointer;
-  transition: all ease-out 0.3s;
+.outro h2, .outro h3 {
+  font-family: "Droid", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
-.audio-control .btn:hover {
+.outro h2 {
+  font-size: 2vw;
+}
+.outro h3 {
+  font-size: 1.3vw;
+}
+.outro .outro-socials {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 50vw;
+  height: 3vh;
+  margin-top: 5vh;
+}
+.outro .outro-socials a {
+  height: 3vh;
+}
+.outro .outro-socials a svg {
+  height: 3vh;
+  opacity: 0.7;
+  fill: white;
+  transition: all ease-in 0.3s;
+}
+.outro .outro-socials a svg:hover {
+  fill: #ebbe1c;
   opacity: 1;
 }
 
@@ -153,7 +199,7 @@ body {
   }
 }
 .opening-stars--crawl {
-  animation: crawl 60s 9s linear forwards;
+  animation: crawl 60s 6s linear forwards;
 }
 
 @keyframes crawl {
@@ -168,5 +214,17 @@ body {
     top: -300vh;
     transform: rotateX(20deg) translateZ(-100vh);
     opacity: 0;
+  }
+}
+.outro {
+  animation: fade 3s ease-in 64s forwards;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }/*# sourceMappingURL=style.css.map */
