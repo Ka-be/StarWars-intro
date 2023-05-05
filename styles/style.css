@@ -44,7 +44,7 @@ body {
   overflow: hidden;
 }
 .scene .intro {
-  color: rgb(131, 241, 241);
+  color: #83f1f1;
   font-size: 3.4vw;
   font-family: "Droid", sans-serif;
   text-align: left;
