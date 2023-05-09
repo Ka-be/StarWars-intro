@@ -1,3 +1,5 @@
+// Allow Audio
+
 window.addEventListener('load', () => {
   const popup = document.createElement('div');
   const audioBtn = document.getElementById('audio-btn');
@@ -47,6 +49,8 @@ window.addEventListener('load', () => {
     outro.style.animationPlayState = 'running';
   });
 
+  // Audio control
+
   audioControl.addEventListener('click', function() {
     if (audio.volume === 0) {
       audio.volume = 1;
@@ -57,6 +61,16 @@ window.addEventListener('load', () => {
     }
   });
 });
+
+// Lightsaber cursor
+const customCursor = document.getElementById('cursor');
+window.addEventListener('mousemove', function(e) {
+  customCursor.style.left = e.clientX + 'px';
+  customCursor.style.top = e.clientY + 'px';
+});
+
+
+
 
 
 
