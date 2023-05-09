@@ -47,7 +47,6 @@ body{
             &:hover{
                 background: $yellow;
                 color: black;
-                cursor: pointer;
                 transition: ease-out 0.2s all;
             }
         }
@@ -260,14 +259,14 @@ body{
     }
 }
 
+//Custom cursor
+
 #cursor{
     position: fixed;
     top: 0;
     left: 0;
-    width: 150px;
-    height: 150px;
     z-index: 10;
     pointer-events: none;
-    content: url('/img/Lightsaber.png');
+    content: url('/img/lightsaber.png');
     transform: translate(-20%, -80%);
 }

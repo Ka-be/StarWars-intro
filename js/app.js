@@ -8,8 +8,8 @@ window.addEventListener('load', () => {
   popup.innerHTML = `
     <p>Do you want to hear epic music ?</p>
     <div class="popup-btns">
-      <button class="popup-btn" id="popup-allow">Yeah 🔈</button>
-      <button class="popup-btn" id="popup-deny">Nooo 🔇</button>
+      <button class="popup-btn hoverElement" id="popup-allow">Yeah 🔈</button>
+      <button class="popup-btn hoverElement" id="popup-deny">Nooo 🔇</button>
     </div>
   `;
   document.body.appendChild(popup);
@@ -62,12 +62,15 @@ window.addEventListener('load', () => {
   });
 });
 
-// Lightsaber cursor
-const customCursor = document.getElementById('cursor');
+//Lightsaber cursor
+const cursor = document.getElementById('cursor');
 window.addEventListener('mousemove', function(e) {
-  customCursor.style.left = e.clientX + 'px';
-  customCursor.style.top = e.clientY + 'px';
+  cursor.style.left = e.clientX + 'px';
+  cursor.style.top = e.clientY + 'px';
 });
+
+// const hoverElement = document.querySelectorAll('hoverElement');
+// console.log(hoverElement);
 
 
 
