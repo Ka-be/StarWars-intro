@@ -37,11 +37,58 @@ body {
   background: black;
 }
 
+.paused {
+  animation-play-state: paused;
+}
+
+.popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+}
+.popup p {
+  font-family: "Droid", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: #ebbe1c;
+  font-size: 3vw;
+}
+.popup .popup-btns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  margin-top: 2vh;
+}
+.popup .popup-btns .popup-btn {
+  height: 40px;
+  width: 80px;
+  background: transparent;
+  color: #ebbe1c;
+  border: 1px #ebbe1c solid;
+  border-radius: 10px;
+  text-transform: uppercase;
+}
+.popup .popup-btns .popup-btn:hover {
+  background: #ebbe1c;
+  color: black;
+  cursor: pointer;
+  transition: ease-out 0.2s all;
+}
+
 .audio-control {
   z-index: 2;
   position: absolute;
   top: 0;
   left: 10px;
+  display: none;
 }
 .audio-control .btn {
   height: 50px;
@@ -153,6 +200,7 @@ body {
 
 .intro {
   animation: intro 6s ease-out;
+  animation-play-state: paused;
 }
 
 @keyframes intro {
@@ -171,6 +219,7 @@ body {
 }
 .opening-stars {
   animation: stars 0s linear 7s forwards;
+  animation-play-state: paused;
 }
 
 @keyframes stars {
@@ -183,6 +232,7 @@ body {
 }
 .opening-stars--logo {
   animation: logo 9s ease-out 7s forwards;
+  animation-play-state: paused;
 }
 
 @keyframes logo {
@@ -200,6 +250,7 @@ body {
 }
 .opening-stars--crawl {
   animation: crawl 60s 6s linear forwards;
+  animation-play-state: paused;
 }
 
 @keyframes crawl {
@@ -218,6 +269,7 @@ body {
 }
 .outro {
   animation: fade 3s ease-in 64s forwards;
+  animation-play-state: paused;
 }
 
 @keyframes fade {

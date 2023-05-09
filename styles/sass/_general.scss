@@ -7,11 +7,56 @@ body{
     background: black;
 }
 
+.paused{
+    animation-play-state: paused;
+}
+
+.popup{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    @include flex-column-center;
+    width: 90%;
+
+    p{
+        font-family: "Droid", sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        color: $yellow;
+        font-size: 3vw
+    }
+
+    .popup-btns{
+        @include flex-center;
+        width: 100%;
+        margin-top: 2vh;
+
+        .popup-btn{
+            height: 40px;
+            width: 80px;
+            background: transparent;
+            color: $yellow;
+            border: 1px $yellow solid;
+            border-radius: 10px;
+            text-transform: uppercase;
+
+            &:hover{
+                background: $yellow;
+                color: black;
+                cursor: pointer;
+                transition: ease-out 0.2s all;
+            }
+        }
+    }
+}
+
 .audio-control{
     z-index: 2;
     position: absolute;
     top: 0;
     left: 10px;
+    display: none;
 
     .btn{
         height: 50px;
@@ -132,8 +177,11 @@ body{
 }
 
 // Animations
+
+
 .intro{
     animation: intro 6s ease-out;
+    animation-play-state: paused;
 }
 @keyframes intro {
     0%{opacity: 0;}
@@ -144,6 +192,7 @@ body{
 
 .opening-stars{
     animation: stars 0s linear 7s forwards;
+    animation-play-state: paused;
 }
 
 @keyframes stars {
@@ -153,6 +202,7 @@ body{
 
 .opening-stars--logo{
     animation: logo 9s ease-out 7s forwards;
+    animation-play-state: paused;
 }
 
 @keyframes logo {
@@ -173,6 +223,7 @@ body{
 
 .opening-stars--crawl{
     animation: crawl 60s 6s linear forwards ;
+    animation-play-state: paused;
 }
 
 @keyframes crawl {
@@ -194,6 +245,7 @@ body{
 
 .outro{
     animation: fade 3s ease-in 64s forwards;
+    animation-play-state: paused;
 }
 
 @keyframes fade {
