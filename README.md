@@ -52,13 +52,13 @@ The iconic Star Wars opening, made with the Force.
 | Blue       | ![#83f1f1](https://placehold.co/15x15/83f1f1/83f1f1.png) `#83f1f1` |
 
 
----
+--- -->
 
 ## 📸 Screenshots
 
-<img src="images/Screenshot.png" width=50%>
+<img src="img/Screenshot.png" width=50%>
 
---- -->
+---
 
 ## 🔗 Links
 
