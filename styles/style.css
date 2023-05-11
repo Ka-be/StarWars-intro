@@ -28,6 +28,10 @@ a:active {
   font-weight: normal;
   font-style: normal;
 }
+* {
+  cursor: none;
+}
+
 html, body {
   width: 100%;
   height: 100%;
@@ -35,7 +39,6 @@ html, body {
 
 body {
   background: black;
-  cursor: none;
 }
 
 .paused {
@@ -93,7 +96,6 @@ body {
 .audio-control .btn {
   height: 50px;
   opacity: 0.5;
-  cursor: pointer;
   transition: all ease-out 0.3s;
 }
 .audio-control .btn:hover {
@@ -288,4 +290,6 @@ body {
   pointer-events: none;
   content: url("/img/lightsaber.png");
   transform: translate(-20%, -80%);
+  transition: opacity 0.1s ease-out;
+  opacity: 1;
 }/*# sourceMappingURL=style.css.map */

@@ -1,4 +1,6 @@
-
+*{
+    cursor: none;
+}
 
 html, body{
     width: 100%;
@@ -7,7 +9,6 @@ html, body{
 
 body{
     background: black;
-    cursor: none;
 }
 
 .paused{
@@ -63,7 +64,6 @@ body{
     .btn{
         height: 50px;
         opacity: 0.5;
-        cursor: pointer;
         transition: all ease-out .3s;
 
         &:hover{
@@ -269,4 +269,7 @@ body{
     pointer-events: none;
     content: url('/img/lightsaber.png');
     transform: translate(-20%, -80%);
+    transition: opacity 0.1s ease-out;
+    opacity: 1;
 }
+

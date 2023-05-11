@@ -1,83 +1,100 @@
 // Allow Audio
 
-window.addEventListener('load', () => {
-  const popup = document.createElement('div');
-  const audioBtn = document.getElementById('audio-btn');
+window.addEventListener("load", () => {
+	const popup = document.createElement("div");
+	const audioBtn = document.getElementById("audio-btn");
 
-  popup.classList.add('popup', 'paused');
-  popup.innerHTML = `
-    <p>Do you want to hear epic music ?</p>
+	popup.classList.add("popup", "paused");
+	popup.innerHTML = `
+		<p>Do you want to hear epic music ?</p>
     <div class="popup-btns">
       <button class="popup-btn hoverElement" id="popup-allow">Yeah 🔈</button>
       <button class="popup-btn hoverElement" id="popup-deny">Nooo 🔇</button>
     </div>
   `;
-  document.body.appendChild(popup);
 
-  const audioControl = document.querySelector('.audio-control');
-  const audio = document.getElementById('starwarstheme');
+	document.body.appendChild(popup);
 
-  const intro = document.querySelector('.intro');
-  const stars = document.querySelector('.opening-stars');
-  const logo = document.querySelector('.opening-stars--logo');
-  const crawl = document.querySelector('.opening-stars--crawl');
-  const outro = document.querySelector('.outro');
 
-  const popupAllow = document.getElementById('popup-allow');
-  popupAllow.addEventListener('click', () => {
-    popup.remove();
-    audioControl.style.display = "block";
-    audioControl.classList.remove('paused');
-    setTimeout(function() {
-      audio.play();
-    }, 6900);
 
-    intro.style.animationPlayState = 'running';
-    stars.style.animationPlayState = 'running';
-    logo.style.animationPlayState = 'running';
-    crawl.style.animationPlayState = 'running';
-    outro.style.animationPlayState = 'running';
-  });
 
-  const popupDeny = document.getElementById('popup-deny');
-  popupDeny.addEventListener('click', () => {
-    popup.remove();
-    intro.style.animationPlayState = 'running';
-    stars.style.animationPlayState = 'running';
-    logo.style.animationPlayState = 'running';
-    crawl.style.animationPlayState = 'running';
-    outro.style.animationPlayState = 'running';
-  });
 
-  // Audio control
 
-  audioControl.addEventListener('click', function() {
-    if (audio.volume === 0) {
-      audio.volume = 1;
-      audioBtn.src = '/img/volume_on.svg';
-    } else {
-      audio.volume = 0;
-      audioBtn.src = '/img/volume_off.svg';
-    }
-  });
+	const audioControl = document.querySelector(".audio-control");
+	const audio = document.getElementById("starwarstheme");
+
+	const intro = document.querySelector(".intro");
+	const stars = document.querySelector(".opening-stars");
+	const logo = document.querySelector(".opening-stars--logo");
+	const crawl = document.querySelector(".opening-stars--crawl");
+	const outro = document.querySelector(".outro");
+
+	const popupAllow = document.getElementById("popup-allow");
+	popupAllow.addEventListener("click", () => {
+		popup.remove();
+		audioControl.style.display = "block";
+		audioControl.classList.remove("paused");
+		setTimeout(function () {
+			audio.play();
+		}, 6900);
+
+		intro.style.animationPlayState = "running";
+		stars.style.animationPlayState = "running";
+		logo.style.animationPlayState = "running";
+		crawl.style.animationPlayState = "running";
+		outro.style.animationPlayState = "running";
+	});
+
+	const popupDeny = document.getElementById("popup-deny");
+	popupDeny.addEventListener("click", () => {
+		popup.remove();
+		intro.style.animationPlayState = "running";
+		stars.style.animationPlayState = "running";
+		logo.style.animationPlayState = "running";
+		crawl.style.animationPlayState = "running";
+		outro.style.animationPlayState = "running";
+	});
+
+	// Audio control
+
+	audioControl.addEventListener("click", function () {
+		if (audio.volume === 0) {
+			audio.volume = 1;
+			audioBtn.src = "/img/volume_on.svg";
+		} else {
+			audio.volume = 0;
+			audioBtn.src = "/img/volume_off.svg";
+		}
+	});
 });
 
-//Lightsaber cursor
-const cursor = document.getElementById('cursor');
-window.addEventListener('mousemove', function(e) {
-  cursor.style.left = e.clientX + 'px';
-  cursor.style.top = e.clientY + 'px';
+
+// Lightsaber cursor
+
+const cursor = document.getElementById("cursor");
+window.addEventListener("mousemove", function (e) {
+	cursor.style.left = e.clientX + "px";
+	cursor.style.top = e.clientY + "px";
 });
 
-// const hoverElement = document.querySelectorAll('hoverElement');
-// console.log(hoverElement);
 
+window.addEventListener("load", function() {
+  const hoverElement = document.getElementsByClassName("hoverElement");
+  const hoverElementArr = Array.from(hoverElement);
 
+	function hoverCursorImage(imageSource) {
+    cursor.style.content = `url(${imageSource})`;
+  }
 
+  hoverElementArr.forEach(element => {
+		element.addEventListener("mouseover", function() {
+      // Mettre à jour la source de l'image du curseur au survol
+      hoverCursorImage("/img/lightsaber-full.png");
+    });
 
-
-
-
-
-
-
+    element.addEventListener("mouseout", function() {
+      // Rétablir la source de l'image du curseur après le survol
+      hoverCursorImage("/img/lightsaber.png");
+    });
+	})
+});
