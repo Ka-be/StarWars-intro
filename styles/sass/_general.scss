@@ -261,15 +261,34 @@ body{
 
 //Custom cursor
 
-#cursor{
+#cursor {
     position: fixed;
     top: 0;
     left: 0;
     z-index: 10;
-    pointer-events: none;
     content: url('/img/lightsaber.png');
+    pointer-events: none;
     transform: translate(-20%, -80%);
-    transition: opacity 0.1s ease-out;
-    opacity: 1;
-}
+    width: 200px; /* Ajoutez cette règle pour définir la largeur initiale du curseur */
+  }
+  
+  @keyframes deployCursor {
+    0% {
+      width: 200px;
+    }
+    100% {
+      width: 300px; /* Mettez ici la largeur finale de votre image du sabre laser */
+    }
+  }
+  
+  @keyframes retractCursor {
+    0% {
+      width: 300px; /* Mettez ici la largeur finale de votre image du sabre laser */
+    }
+    100% {
+      width: 200px;
+    }
+  }
+  
+
 

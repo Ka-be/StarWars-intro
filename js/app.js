@@ -71,30 +71,44 @@ window.addEventListener("load", () => {
 
 // Lightsaber cursor
 
+
 const cursor = document.getElementById("cursor");
+let isMouseDown = false;
+
 window.addEventListener("mousemove", function (e) {
-	cursor.style.left = e.clientX + "px";
-	cursor.style.top = e.clientY + "px";
-});
-
-
-window.addEventListener("load", function() {
-  const hoverElement = document.getElementsByClassName("hoverElement");
-  const hoverElementArr = Array.from(hoverElement);
-
-	function hoverCursorImage(imageSource) {
-    cursor.style.content = `url(${imageSource})`;
+  if (!isMouseDown) {
+    cursor.style.left = e.clientX + "px";
+    cursor.style.top = e.clientY + "px";
   }
-
-  hoverElementArr.forEach(element => {
-		element.addEventListener("mouseover", function() {
-      // Mettre à jour la source de l'image du curseur au survol
-      hoverCursorImage("/img/lightsaber-full.png");
-    });
-
-    element.addEventListener("mouseout", function() {
-      // Rétablir la source de l'image du curseur après le survol
-      hoverCursorImage("/img/lightsaber.png");
-    });
-	})
 });
+
+window.addEventListener("mousedown", function (e) {
+  if (e.button === 0) {
+    isMouseDown = true;
+    cursor.style.animation = "deployCursor 0.5s forwards";
+    cursor.style.content = "url('/img/lightsaber-full.png')";
+  }
+});
+
+window.addEventListener("mouseup", function (e) {
+  if (e.button === 0) {
+    isMouseDown = false;
+    cursor.style.animation = "retractCursor 0.5s forwards";
+    cursor.style.content = "url('/img/lightsaber.png')";
+  }
+});
+
+window.addEventListener("mouseout", function (e) {
+  if (isMouseDown) {
+    isMouseDown = false;
+    cursor.style.animation = "retractCursor 0.5s forwards";
+    cursor.style.content = "url('/img/lightsaber.png')";
+  }
+});
+
+
+
+
+
+
+
