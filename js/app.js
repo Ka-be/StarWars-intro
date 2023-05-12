@@ -53,6 +53,11 @@ window.addEventListener("load", () => {
 		logo.style.animationPlayState = "running";
 		crawl.style.animationPlayState = "running";
 		outro.style.animationPlayState = "running";
+		audio.volume = 0;
+		fxDeploy.volume = 0;
+		fxRun.volume = 0;
+		fxRetract.volume = 0;
+		audioBtn.src = "/img/volume_off.svg";
 	});
 
 	// Audio control
@@ -108,9 +113,9 @@ window.addEventListener("mousedown", function (e) {
 		cursor.style.content = "url('/img/lightsaber-full.png')";
 		cursor.style.left = e.clientX + "px";
 		cursor.style.top = e.clientY + "px";
-		soundDeploy(); // Jouer le son fxDeploy
-		fxRun.loop = true; // Activer la lecture en boucle pour fxRun
-		soundRun(); // Jouer le son fxRun
+		soundDeploy(); 
+		fxRun.loop = true; 
+		soundRun();
 	}
 });
 
@@ -119,10 +124,10 @@ window.addEventListener("mouseup", function (e) {
 		isMouseDown = false;
 		cursor.style.animation = "retractCursor 0.5s forwards";
 		cursor.style.content = "url('/img/lightsaber.png')";
-		fxRun.loop = false; // Désactiver la lecture en boucle pour fxRun
+		fxRun.loop = false; 
 		fxRun.pause();
 		fxRun.currentTime = 0;
-		soundRetract(); // Jouer le son fxRetract
+		soundRetract(); 
 	}
 });
 
@@ -131,7 +136,7 @@ window.addEventListener("mouseout", function (e) {
 		isMouseDown = false;
 		cursor.style.animation = "retractCursor 0.5s forwards";
 		cursor.style.content = "url('/img/lightsaber.png')";
-		fxRun.loop = false; // Désactiver la lecture en boucle pour fxRun
-		soundRetract(); // Jouer le son fxRetract
+		fxRun.loop = false; 
+		soundRetract(); 
 	}
 });
