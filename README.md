@@ -1,12 +1,8 @@
-# Star Wars Opening - ![Status](https://img.shields.io/badge/Status-On%20going-fd9644?style=flat-square)
-
-
-
-<!-- ![Status](https://img.shields.io/badge/Status-Finished-20bf6b?style=flat-square) -->
+# Star Wars Opening - ![Status](https://img.shields.io/badge/Status-Finished-20bf6b?style=flat-square)
 
 <img src="img/logo.svg" width=30%>
 
-The iconic Star Wars opening, made with the Force.
+The iconic Star Wars opening, made with the Force (and the Dark Side love).
 
 ---
 
@@ -24,8 +20,8 @@ The iconic Star Wars opening, made with the Force.
 
 ## 💡 Features
 
-![Responsive](https://img.shields.io/badge/Responsive-Partial-3498DB?style=flat-square)
-<!-- ![Responsive](https://img.shields.io/badge/Responsive-Full-27AE60?style=flat-square) -->
+![Responsive](https://img.shields.io/badge/Responsive-Full-27AE60?style=flat-square)
+- Interactive cursor (Lightsaber)
 
 
 ---
@@ -44,7 +40,7 @@ The iconic Star Wars opening, made with the Force.
 
 ---
 
-<!-- ## 🎨 Color Reference
+## 🎨 Color Reference
 
 | Color      | Hex                                                                |
 | ---------- | ------------------------------------------------------------------ |
@@ -52,7 +48,7 @@ The iconic Star Wars opening, made with the Force.
 | Blue       | ![#83f1f1](https://placehold.co/15x15/83f1f1/83f1f1.png) `#83f1f1` |
 
 
---- -->
+---
 
 ## 📸 Screenshots
 
