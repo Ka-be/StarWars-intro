@@ -33,7 +33,8 @@ a:active {
   cursor: none;
 }
 
-html, body {
+html,
+body {
   width: 100%;
   height: 100%;
 }
@@ -92,7 +93,6 @@ body {
   position: absolute;
   top: 0;
   left: 10px;
-  display: none;
 }
 .audio-control .btn {
   height: 50px;
@@ -167,7 +167,8 @@ body {
   height: 100%;
   opacity: 0;
 }
-.outro h2, .outro h3 {
+.outro h2,
+.outro h3 {
   font-family: "Droid", sans-serif;
   text-transform: uppercase;
   letter-spacing: 1px;
