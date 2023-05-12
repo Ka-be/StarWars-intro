@@ -52,7 +52,7 @@ The iconic Star Wars opening, made with the Force (and the Dark Side love).
 
 ## 📸 Screenshots
 
-<img src="img/Screenshot.png" width=50%>
+<img src="img/screenshot.png" width=50%>
 
 ---
 
