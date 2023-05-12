@@ -71,6 +71,24 @@ window.addEventListener("load", () => {
 
 // Lightsaber cursor
 
+const fxDeploy = document.getElementById("fx-deploy");
+const fxRun = document.getElementById("fx-run");
+const fxRetract = document.getElementById("fx-retract");
+
+function soundDeploy() {
+  fxDeploy.currentTime = 0;
+  fxDeploy.play();
+}
+
+function soundRun() {
+  fxRun.currentTime = 0;
+  fxRun.play();
+}
+
+function soundRetract() {
+  fxRetract.currentTime = 0;
+  fxRetract.play();
+}
 
 const cursor = document.getElementById("cursor");
 let isMouseDown = false;
@@ -87,6 +105,11 @@ window.addEventListener("mousedown", function (e) {
     isMouseDown = true;
     cursor.style.animation = "deployCursor 0.5s forwards";
     cursor.style.content = "url('/img/lightsaber-full.png')";
+    cursor.style.left = e.clientX + "px";
+    cursor.style.top = e.clientY + "px";
+    soundDeploy(); // Jouer le son fxDeploy
+    fxRun.loop = true; // Activer la lecture en boucle pour fxRun
+    soundRun(); // Jouer le son fxRun
   }
 });
 
@@ -95,6 +118,10 @@ window.addEventListener("mouseup", function (e) {
     isMouseDown = false;
     cursor.style.animation = "retractCursor 0.5s forwards";
     cursor.style.content = "url('/img/lightsaber.png')";
+    fxRun.loop = false; // Désactiver la lecture en boucle pour fxRun
+		fxRun.pause();
+		fxRun.currentTime = 0;
+    soundRetract(); // Jouer le son fxRetract
   }
 });
 
@@ -103,12 +130,7 @@ window.addEventListener("mouseout", function (e) {
     isMouseDown = false;
     cursor.style.animation = "retractCursor 0.5s forwards";
     cursor.style.content = "url('/img/lightsaber.png')";
+    fxRun.loop = false; // Désactiver la lecture en boucle pour fxRun
+    soundRetract(); // Jouer le son fxRetract
   }
 });
-
-
-
-
-
-
-
